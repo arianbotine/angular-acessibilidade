@@ -1,3 +1,4 @@
+import { UniqueIdService } from './../../services/unique-id.service';
 import {
   Component,
   Input,
@@ -22,8 +23,8 @@ import * as uuid from 'uuid';
   ],
 })
 export class YesNoButtonGroupComponent implements OnInit, ControlValueAccessor {
-  constructor() {
-    this.id = `yes-or-no-${uuid.v1()}`;
+  constructor(uniqueIdService: UniqueIdService) {
+    this.id = uniqueIdService.generateUniqueIdWithPrefix('yes-no-button-group');
   }
   @Input() public value: string = null;
   @Input() public label = '';
