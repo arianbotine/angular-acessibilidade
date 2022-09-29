@@ -1,5 +1,6 @@
 <main>
   <h1>Form</h1>
+  <!--Usar o (ngSubmit) previne o refresh da pagina caso ocorra algum erro o submit comum faz o refresh-->
   <form [formGroup]="form" (ngSubmit)="submit()">
     <app-yes-no-button-group
       formControlName="yesNoAnswer"
@@ -8,5 +9,4 @@
     </app-yes-no-button-group>
     <button>Submit</button>
   </form>
-  <span>Valor de yesNoAnswer {{ yesNoAnswer }}</span>
 </main>
