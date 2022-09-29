@@ -1,11 +1,7 @@
 <main>
-  <h1>Form</h1>
+  <h1 tabindex="-1">Form</h1>
   <!--Usar o (ngSubmit) previne o refresh da pagina caso ocorra algum erro o submit comum faz o refresh-->
   <form [formGroup]="form" (ngSubmit)="submit()">
-    <app-yes-no-button-group
-      label="Você é bom o suficiente em Angular?"
-    >
-    </app-yes-no-button-group>
     <app-yes-no-button-group
       formControlName="yesNoAnswer"
       label="Você é bom o suficiente em Angular?"

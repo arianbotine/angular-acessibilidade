@@ -8,7 +8,6 @@ import {
   forwardRef,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import * as uuid from 'uuid';
 
 @Component({
   selector: 'app-yes-no-button-group',
